@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { Layout } from '@/components/Layout'
 import { RatingStars } from '@/components/RatingStars'
 import { StatusBadge } from '@/components/StatusBadge'
@@ -31,14 +30,12 @@ import {
   AdminSubmission,
   Analytics,
 } from '@/lib/api'
-import { isAuthenticated } from '@/lib/auth'
 import { formatDate, truncate } from '@/lib/utils'
 import { Loader2, Search, RefreshCw, ChevronDown, ChevronUp } from 'lucide-react'
 
 const ITEMS_PER_PAGE = 20
 
 export function AdminDashboard() {
-  const navigate = useNavigate()
   const [submissions, setSubmissions] = useState<AdminSubmission[]>([])
   const [analytics, setAnalytics] = useState<Analytics | null>(null)
   const [total, setTotal] = useState(0)

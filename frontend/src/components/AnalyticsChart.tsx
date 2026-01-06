@@ -10,7 +10,6 @@ import {
   PieChart,
   Pie,
   Cell,
-  Legend,
 } from 'recharts'
 
 interface AnalyticsChartProps {
@@ -64,7 +63,7 @@ export function AnalyticsChart({
                 fill="#8884d8"
                 dataKey="count"
               >
-                {ratingData.map((entry, index) => (
+                {ratingData.map((_, index) => (
                   <Cell
                     key={`cell-${index}`}
                     fill={RATING_COLORS[index]}
