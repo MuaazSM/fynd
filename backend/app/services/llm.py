@@ -1,6 +1,5 @@
 import json
 import time
-from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
 from langchain.schema import HumanMessage, SystemMessage
 from app.core.config import settings
@@ -26,14 +25,6 @@ class LLMClient:
             self.llm = ChatGroq(
                 model=self.model,
                 groq_api_key=self.api_key,
-                temperature=0.7,
-                timeout=self.timeout,
-                max_retries=self.max_retries
-            )
-        elif self.provider == "openai":
-            self.llm = ChatOpenAI(
-                model=self.model,
-                openai_api_key=self.api_key,
                 temperature=0.7,
                 timeout=self.timeout,
                 max_retries=self.max_retries
