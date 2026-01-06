@@ -17,6 +17,8 @@ services:
         fromDatabase:
           name: fynd-db
           property: connectionString
+      - key: PYTHON_VERSION
+        value: 3.11
       - key: SECRET_KEY
         generateValue: true
       - key: GROQ_API_KEY
