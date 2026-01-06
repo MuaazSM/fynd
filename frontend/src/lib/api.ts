@@ -1,6 +1,6 @@
 import { getToken } from './auth'
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://fynd-api.onrender.com'
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://fynd-api-cwwa.onrender.com'
 
 export interface SubmissionRequest {
   rating: number
